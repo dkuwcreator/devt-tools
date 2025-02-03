@@ -1,21 +1,25 @@
 {
-    "name": "win-nvm",
-    "description": "No-Admin Windows version of Node Version Manager",
-    "command": "nvm",
-    "dependencies": {
-        "posix": {},
-        "windows": {
-            "winget": ">=1.9.25200"
-        }
-    },
-    "scripts": {
-        "posix": {},
-        "windows": {
-            "install": "iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | iex",
-            "upgrade": "iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | iex",
-            "uninstall": "iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | Out-File \"$env:TEMP\\install.ps1\"; powershell -ExecutionPolicy Bypass -File \"$env:TEMP\\install.ps1\" -Uninstall"
-        },
-        "version": "wnvm --version",
-        "test": "wnvm --version"
+  "name": "win-nvm",
+  "description": "No-Admin Windows version of Node Version Manager",
+  "command": "nvm",
+  "dependencies": {
+    "posix": {},
+    "windows": {
+      "winget": ">=1.9.25200"
     }
+  },
+  "scripts": {
+    "posix": {
+      "install": "echo 'This is a Windows only package'",
+      "upgrade": "echo 'This is a Windows only package'",
+      "uninstall": "echo 'This is a Windows only package'"
+    },
+    "windows": {
+      "install": "iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | iex",
+      "upgrade": "iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | iex",
+      "uninstall": "iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | Out-File \"$env:TEMP\\install.ps1\"; powershell -ExecutionPolicy Bypass -File \"$env:TEMP\\install.ps1\" -Uninstall"
+    },
+    "version": "wnvm --version",
+    "test": "wnvm --version"
+  }
 }
