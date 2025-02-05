@@ -15,7 +15,7 @@
       "uninstall": "echo 'This is a Windows only package'"
     },
     "windows": {
-      "install": "pwsh iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | iex",
+      "install": "pwsh -Command \"iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | iex\"",
       "upgrade": "pwsh iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | iex",
       "uninstall": "pwsh iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | Out-File \"$env:TEMP\\install.ps1\"; powershell -ExecutionPolicy Bypass -File \"$env:TEMP\\install.ps1\" -Uninstall"
     },
