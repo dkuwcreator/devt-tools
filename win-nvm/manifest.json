@@ -17,7 +17,7 @@
     "windows": {
       "install": "pwsh -Command \"iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | iex\"",
       "upgrade": "pwsh -Command \"iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | iex\"",
-      "uninstall": "pwsh -Command \"iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | Out-File \"$env:TEMP\\install.ps1\"; powershell -ExecutionPolicy Bypass -File \"$env:TEMP\\install.ps1\" -Uninstall\""
+      "uninstall": "pwsh -Command \"iwr -useb https://raw.githubusercontent.com/dkuwcreator/win-nvm/main/install.ps1 | Out-File '$env:TEMP\\install.ps1'; powershell -ExecutionPolicy Bypass -File '$env:TEMP\\install.ps1' -Uninstall\""
     },
     "version": "wnvm --version",
     "test": "wnvm --version"
