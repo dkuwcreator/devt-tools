@@ -1,0 +1,23 @@
+{
+  "name": "Development Tools",
+  "description": "Short for Development Tools, this package is a collection of tools for developers.",
+  "command": "devt",
+  "dependencies": {
+    "posix": {},
+    "windows": {}
+  },
+  "scripts": {
+    "posix": {
+      "install": "echo 'This is a Windows only package'",
+      "upgrade": "echo 'This is a Windows only package'",
+      "uninstall": "echo 'This is a Windows only package'"
+    },
+    "windows": {
+      "install": "pwsh -Command \"iwr -useb https://raw.githubusercontent.com/dkuwcreator/devt/main/install.ps1 | iex\"",
+      "upgrade": "pwsh -Command \"iwr -useb https://raw.githubusercontent.com/dkuwcreator/devt/main/install.ps1 | iex\"",
+      "uninstall": "pwsh -Command \"iwr -useb https://raw.githubusercontent.com/dkuwcreator/devt/main/install.ps1 -OutFile \\\"$env:TEMP\\\\install.ps1\\\"; pwsh -ExecutionPolicy Bypass -File \\\"$env:TEMP\\\\install.ps1\\\" -Uninstall\""
+    },
+    "version": "devt --version",
+    "test": "devt --version"
+  }
+}
