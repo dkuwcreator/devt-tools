@@ -1,0 +1,10 @@
+#!/bin/sh
+
+SUBFOLDER_URL="https://nn-engineering@dev.azure.com/nn-engineering/InnerSource/_git/iac-utilities"
+LOCAL_PATH=".utils"
+
+if [ -d "$LOCAL_PATH" ]; then
+  (cd "$LOCAL_PATH" && git pull origin master) || { echo "Failed to update subfolder"; exit 1; }
+else
+  git clone "$SUBFOLDER_URL" "$LOCAL_PATH" || { echo "Failed to clone subfolder"; exit 1; }
+fi
