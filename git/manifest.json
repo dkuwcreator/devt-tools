@@ -11,7 +11,7 @@
             "upgrade": "sudo apt-get install git --upgrade"
         },
         "windows": {
-            "install": "scripts/install.ps1",
+            "install": "./scripts/install.ps1",
             "uninstall": "winget uninstall e --id Git.Git",
             "upgrade": "winget upgrade e --id Git.Git",
             "set": "scripts/set.ps1"
