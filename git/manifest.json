@@ -1,0 +1,21 @@
+{
+    "name": "Git",
+    "description": "Git is a distributed version control system for tracking changes in source code during software development.",
+    "command": "git",
+    "dependencies": {},
+    "scripts": {
+        "posix": {
+            "install": "sudo apt-get install git",
+            "uninstall": "sudo apt-get remove git",
+            "upgrade": "sudo apt-get install git --upgrade"
+        },
+        "windows": {
+            "install": "scripts/install.ps1",
+            "uninstall": "winget uninstall e --id Git.Git",
+            "upgrade": "winget upgrade e --id Git.Git",
+            "set": "scripts/set.ps1"
+        },
+        "version": "git --version",
+        "test": "git --version"
+    }
+}
