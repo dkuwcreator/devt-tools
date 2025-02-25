@@ -6,6 +6,3 @@ scripts:
   install: cmd /c "echo This is a testy install"
   hello: 
     windows: ./hello.ps1
-  test:
-    windows: ./test.ps1
-    linux: ./test.sh
