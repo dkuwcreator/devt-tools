@@ -3,6 +3,6 @@ description: This is just a testy
 command: testy
 
 scripts:
-  install: cmd /c echo "This is a testy install"
+  install: echo "This is a testy install"
   hello: 
     windows: ./hello.ps1
