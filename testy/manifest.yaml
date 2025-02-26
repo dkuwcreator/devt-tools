@@ -13,6 +13,7 @@ scripts:
       args: echo "$env:TESTY"
   goodbye:
     windows: 
+      shell: ''
       args: echo "Goodbye"
       
     
