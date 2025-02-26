@@ -15,5 +15,3 @@ scripts:
     windows: 
       shell: ''
       args: echo "Goodbye"
-      
-    
