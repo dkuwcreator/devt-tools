@@ -13,5 +13,5 @@ scripts:
       args: echo "$env:TESTY"
   goodbye:
     windows: 
-      shell: 'cmd /c'
+      shell: cmd /c
       args: echo "Goodbye"
