@@ -6,3 +6,10 @@ scripts:
   install: echo "This is a testy install"
   hello: 
     windows: ./hello.ps1
+  test:
+    env:
+      TESTY: "This is a testy test"
+    windows: 
+      args: echo "$env:TESTY"
+      
+    
