@@ -11,7 +11,14 @@ scripts:
       TESTY: "This is a testy test"
     windows: 
       args: echo "$env:TESTY"
-  goodbye:
+  default:
+    windows: 
+      args: echo 'Default'
+  cmd:
+    windows: 
+      shell: cmd /c
+      args: echo 'Using cmd'
+  empty:
     windows: 
       shell: ''
-      args: echo Goodbye
+      args: echo 'Empty'
