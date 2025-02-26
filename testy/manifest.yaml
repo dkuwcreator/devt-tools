@@ -11,5 +11,9 @@ scripts:
       TESTY: "This is a testy test"
     windows: 
       args: echo "$env:TESTY"
+  goodbye:
+    windows: 
+      shell: ""
+      args: echo "Goodbye"
       
     
